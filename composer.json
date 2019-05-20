@@ -1,4 +1,13 @@
 {
+    "name": "HarryYanHao/HF",
+    "description": "Harry Framework",
+    "authors": [
+        {
+            "name": "Harry yan",
+            "email":"393464654@qq.com"
+        }
+    ],
+    "license": "MIT",
     "require":{
         "noahbuscher/macaw": "dev-master",
         "monolog/monolog": "^1.23",
