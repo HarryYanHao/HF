@@ -1,7 +1,4 @@
 <?php
-function get_version(){
-    return 'v1.0.0';
-}
 function config($param){
     if(empty($param)){
         return [];
@@ -37,7 +34,7 @@ function boot(){
     $di->setShared('log',\App\Providers\Log::bootLog());
     $di->setShared('db',\App\Providers\DB::bootDB());
     $di->setShared('redis',\App\Providers\Redis::bootRedis());
-    $di->setShared('mongodb',\App\Providers\MongoDB::bootMongoDB());
+    //$di->setShared('mongodb',\App\Providers\MongoDB::bootMongoDB());
     return $di;
 }
 function json($param){

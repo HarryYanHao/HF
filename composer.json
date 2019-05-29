@@ -11,9 +11,7 @@
     "require":{
         "noahbuscher/macaw": "dev-master",
         "monolog/monolog": "^1.23",
-        "symfony/var-dumper": "^3.4",
-        "illuminate/database": "*",
-        "symfony/http-foundation":"^2.7"
+        "symfony/var-dumper": "^3.4"
     },
     "autoload": {
         "classmap": [
@@ -21,7 +19,9 @@
           "app/models",
           "common",
           "app/providers",
-          "app/service"
+          "app/service",
+          "bootstrap",
+          "framework"
         ],
         "files":[
             "common/helper/function.php"

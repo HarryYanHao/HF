@@ -8,18 +8,14 @@ header("Content-type:text/html;charset=utf-8");
 require '../vendor/autoload.php';
 
 
-// Eloquent ORM
-
-$capsule = new Capsule;
-
-$capsule->addConnection(require '../config/database.php');
-
-$capsule->bootEloquent();
-
+$app = require_once __DIR__.'/../bootstrap/app.php';
+dump($app::getInstance());
+dump($app->configPath());
 
 
 //加载需要的使用的实例
 boot();
+
 
 
 // 路由配置

@@ -1,7 +1,4 @@
 <?php
-
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 /**
 * BaseController
 */
@@ -15,8 +12,6 @@ class BaseController
     //判断是命令行模式还是web模式
     if(php_sapi_name() === 'cli'){
       $this->request = $this->parseArgs($argv);
-    }else{
-      $this->request = Request::createFromGlobals();
     }
     
   }
@@ -34,10 +29,7 @@ class BaseController
       return ($_SERVER['REQUEST_METHOD'] == 'POST' &&(empty($_SERVER['HTTP_REFERER']) || preg_replace("~https?:\/\/([^\:\/]+).*~i", "\\1", $_SERVER['HTTP_REFERER']) == preg_replace("~([^\:]+).*~", "\\1", $_SERVER['HTTP_HOST']))) ? true : false;
   }
   public function _outPut($res_data){
-    $response = new Response();
-    $response->setContent($res_data);
-    $response->setMaxAge(10);
-    $response->send();
+      echo $res_data;
   }
   public function parseArgs($argv){
     array_shift($argv);
