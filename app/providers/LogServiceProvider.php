@@ -1,8 +1,10 @@
 <?php
 namespace App\Providers;
-class LogServiceProvider extends ServiceProvider{
+
+use Libs\Log\Log;
+class LogServiceProvider extends ServiceProvider {
 	public function register(){
-		$this->app->bind('log','Log');
+		$this->app->bind('log',Log::class);
 	}
     
 }

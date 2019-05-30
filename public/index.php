@@ -14,9 +14,9 @@ dump($app->configPath());
 
 
 //加载需要的使用的实例
-boot();
-
-
+//boot();
+$log = $app->make('log');
+$log->info('test');
 
 // 路由配置
 require '../config/routes.php';

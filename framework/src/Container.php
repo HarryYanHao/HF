@@ -1,6 +1,8 @@
 <?php
 namespace Illuminate\Container;
 
+use ReflectionClass;
+
 class Container{
 	protected $binding = [];
 	protected static $instance;
@@ -23,7 +25,7 @@ class Container{
 		$reflector = new ReflectionClass($concrete);
 		//类->构造方法
 		$constructor = $reflector->getConstructor();
-		if(is_null){
+		if(is_null($constructor)){
 			//没有构造方法 直接创建对象
 			return $reflector->newInstance();
 		}

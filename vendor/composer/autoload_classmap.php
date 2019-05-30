@@ -9,8 +9,10 @@ return array(
     'App\\Models\\Collect' => $baseDir . '/app/models/Collect.php',
     'App\\Providers\\DB' => $baseDir . '/app/providers/Providers.php',
     'App\\Providers\\Log' => $baseDir . '/app/providers/Providers.php',
+    'App\\Providers\\LogServiceProvider' => $baseDir . '/app/providers/LogServiceProvider.php',
     'App\\Providers\\MongoDB' => $baseDir . '/app/providers/Providers.php',
     'App\\Providers\\Redis' => $baseDir . '/app/providers/Providers.php',
+    'App\\Providers\\ServiceProvider' => $baseDir . '/app/providers/ServiceProvider.php',
     'App\\Services\\RequestService' => $baseDir . '/app/service/RequestService.php',
     'App\\Services\\TranslateService' => $baseDir . '/app/service/TranslateService.php',
     'App\\Services\\YoudaoService' => $baseDir . '/app/service/YoudaoService.php',
@@ -20,4 +22,5 @@ return array(
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'Illuminate\\Application\\Application' => $baseDir . '/framework/src/Application.php',
     'Illuminate\\Container\\Container' => $baseDir . '/framework/src/Container.php',
+    'Libs\\Log\\Log' => $baseDir . '/libs/Log.php',
 );

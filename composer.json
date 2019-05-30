@@ -21,7 +21,8 @@
           "app/providers",
           "app/service",
           "bootstrap",
-          "framework"
+          "framework",
+          "libs"
         ],
         "files":[
             "common/helper/function.php"
