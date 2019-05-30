@@ -23,12 +23,12 @@ function config($param){
     
     
 }
-function app($param){
-    //
-    $app = Di::getInstance();
-    return $app[$param];
+// function app($param){
+//     //
+//     $app = Di::getInstance();
+//     return $app[$param];
 
-}
+// }
 function boot(){
     $di = new Di();
     $di->setShared('log',\App\Providers\Log::bootLog());

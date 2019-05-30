@@ -6,12 +6,15 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Facade\\Facade' => $baseDir . '/app/facades/Facade.php',
+    'App\\Facade\\Log' => $baseDir . '/app/facades/Log.php',
     'App\\Models\\Collect' => $baseDir . '/app/models/Collect.php',
     'App\\Providers\\DB' => $baseDir . '/app/providers/Providers.php',
     'App\\Providers\\Log' => $baseDir . '/app/providers/Providers.php',
     'App\\Providers\\LogServiceProvider' => $baseDir . '/app/providers/LogServiceProvider.php',
     'App\\Providers\\MongoDB' => $baseDir . '/app/providers/Providers.php',
     'App\\Providers\\Redis' => $baseDir . '/app/providers/Providers.php',
+    'App\\Providers\\RedisServiceProvider' => $baseDir . '/app/providers/RedisServiceProvider.php',
     'App\\Providers\\ServiceProvider' => $baseDir . '/app/providers/ServiceProvider.php',
     'App\\Services\\RequestService' => $baseDir . '/app/service/RequestService.php',
     'App\\Services\\TranslateService' => $baseDir . '/app/service/TranslateService.php',
@@ -23,4 +26,5 @@ return array(
     'Illuminate\\Application\\Application' => $baseDir . '/framework/src/Application.php',
     'Illuminate\\Container\\Container' => $baseDir . '/framework/src/Container.php',
     'Libs\\Log\\Log' => $baseDir . '/libs/Log.php',
+    'Libs\\Redis\\Redis' => $baseDir . '/libs/Redis.php',
 );

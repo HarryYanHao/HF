@@ -102,7 +102,6 @@ class Logger implements LoggerInterface, ResettableInterface
         self::ALERT     => 'ALERT',
         self::EMERGENCY => 'EMERGENCY',
     );
-
     /**
      * @var \DateTimeZone
      */
@@ -149,6 +148,7 @@ class Logger implements LoggerInterface, ResettableInterface
         $this->name = $name;
         $this->setHandlers($handlers);
         $this->processors = $processors;
+        return $this;
     }
 
     /**

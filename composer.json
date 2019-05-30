@@ -20,6 +20,7 @@
           "common",
           "app/providers",
           "app/service",
+          "app/facades",
           "bootstrap",
           "framework",
           "libs"
