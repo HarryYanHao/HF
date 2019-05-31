@@ -1,10 +1,10 @@
 <?php
 namespace App\Providers;
 
-use Libs\Redis\Redis;
+use Libs\Redis\MyRedis;
 class RedisServiceProvider extends ServiceProvider {
 	public function register(){
-		$this->app->bind('redis',Redis::class);
+		$this->app->bind('redis',MyRedis::class);
 	}
     
 }

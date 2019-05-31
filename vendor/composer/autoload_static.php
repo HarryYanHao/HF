@@ -56,8 +56,10 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
     );
 
     public static $classMap = array (
+        'App\\Contract\\Log' => __DIR__ . '/../..' . '/app/contract/Log.php',
         'App\\Facade\\Facade' => __DIR__ . '/../..' . '/app/facades/Facade.php',
         'App\\Facade\\Log' => __DIR__ . '/../..' . '/app/facades/Log.php',
+        'App\\Facade\\Redis' => __DIR__ . '/../..' . '/app/facades/Redis.php',
         'App\\Models\\Collect' => __DIR__ . '/../..' . '/app/models/Collect.php',
         'App\\Providers\\DB' => __DIR__ . '/../..' . '/app/providers/Providers.php',
         'App\\Providers\\Log' => __DIR__ . '/../..' . '/app/providers/Providers.php',
@@ -75,8 +77,8 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
         'HomeController' => __DIR__ . '/../..' . '/app/controllers/HomeController.php',
         'Illuminate\\Application\\Application' => __DIR__ . '/../..' . '/framework/src/Application.php',
         'Illuminate\\Container\\Container' => __DIR__ . '/../..' . '/framework/src/Container.php',
-        'Libs\\Log\\Log' => __DIR__ . '/../..' . '/libs/Log.php',
-        'Libs\\Redis\\Redis' => __DIR__ . '/../..' . '/libs/Redis.php',
+        'Libs\\Log\\MyLog' => __DIR__ . '/../..' . '/libs/Log.php',
+        'Libs\\Redis\\MyRedis' => __DIR__ . '/../..' . '/libs/MyRedis.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -6,8 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Contract\\Log' => $baseDir . '/app/contract/Log.php',
     'App\\Facade\\Facade' => $baseDir . '/app/facades/Facade.php',
     'App\\Facade\\Log' => $baseDir . '/app/facades/Log.php',
+    'App\\Facade\\Redis' => $baseDir . '/app/facades/Redis.php',
     'App\\Models\\Collect' => $baseDir . '/app/models/Collect.php',
     'App\\Providers\\DB' => $baseDir . '/app/providers/Providers.php',
     'App\\Providers\\Log' => $baseDir . '/app/providers/Providers.php',
@@ -25,6 +27,6 @@ return array(
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'Illuminate\\Application\\Application' => $baseDir . '/framework/src/Application.php',
     'Illuminate\\Container\\Container' => $baseDir . '/framework/src/Container.php',
-    'Libs\\Log\\Log' => $baseDir . '/libs/Log.php',
-    'Libs\\Redis\\Redis' => $baseDir . '/libs/Redis.php',
+    'Libs\\Log\\MyLog' => $baseDir . '/libs/Log.php',
+    'Libs\\Redis\\MyRedis' => $baseDir . '/libs/MyRedis.php',
 );

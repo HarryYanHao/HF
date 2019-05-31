@@ -17,9 +17,10 @@
         "classmap": [
           "app/controllers",
           "app/models",
-          "common",
           "app/providers",
           "app/service",
+          "app/contract",
+          "common",
           "app/facades",
           "bootstrap",
           "framework",
