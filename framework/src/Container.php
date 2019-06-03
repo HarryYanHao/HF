@@ -9,18 +9,18 @@ class Container{
 
 	public function bind($abstract,$concrete){
 		//根据名称创建绑定对象 暂时只支持闭包
-		$this->binding[$abstract]['concrete'] = function($container) use ($concrete){
-			return $container->build($concrete);
+		$this->binding[$abstract]['concrete'] = function($container,$parameters) use ($concrete){
+			return $container->build($concrete,$parameters);
 		};
 	}
 
-	public function make($abstract){
+	public function make($abstract,$parameters=[]){
 		//根据key值获取binding值
 		$concrete = $this->binding[$abstract]['concrete'];
-		return $concrete($this);
+		return $concrete($this,$parameters);
 	}
 	//利用反射创建对象
-	public function build($concrete){
+	public function build($concrete,$parameters=[]){
 		//反射->类
 		$reflector = new ReflectionClass($concrete);
 		//类->构造方法
@@ -31,17 +31,33 @@ class Container{
 		}
 		//构造方法->构造方法的参数
 		$dependencies = $constructor->getParameters();
-		$instances = $this->getDependencies($dependencies);
-		return $reflector->newInstance($instances);
+		$parameters = $this->keyParametersByArgument($dependencies,$parameters);
+		$instances = $this->getDependencies($dependencies,$parameters);
+		return $reflector->newInstanceArgs($instances);
 	}
 
 	//获取参数依赖(递归获取)
-	protected function getDependencies($parmters){
+	protected function getDependencies($parmters,$primitives){
 		$dependencies = [];
 		foreach ($parmters as  $parmter) {
-			$dependencies[] = $this->make($parmter->getClass()->name);
+			if(array_key_exists($parmter->name,$primitives)){
+				$dependencies[] = $primitives[$parmter->name];
+			}else{
+				$dependencies[] = $this->make($parmter->getClass()->name);	
+			}
 		}
 		return $dependencies;
+	}
+	//获取参数值
+	protected function keyParametersByArgument($dependencies,$parameters){
+		foreach($parameters as $key=>$value){
+			if(is_numeric($key)){
+				unset($parameters[$key]);
+
+				$parameters[$dependencies[$key]->name] = $value;
+			}
+		}
+		return $parameters;
 	}
 	public static function setInstance($instance){
 		static::$instance = $instance;
@@ -49,5 +65,10 @@ class Container{
 	public static function getInstance(){
 		return static::$instance;
 	}
+	public  function getBindings(){
+		return $this->binding;
+	}
+	
+
 	
 }

@@ -5,7 +5,7 @@ use App\Contract\Log;
 class MyRedis extends Redis implements Log{
 	public function __construct(){
 		$redisConfig = config('redis');
-		self::connect($redisConfig['host'],$redisConfig['port']);
+		$this->connect($redisConfig['host'],$redisConfig['port']);
 	}
 	public function write($key,$msg){
 		$this->set($key,$msg);

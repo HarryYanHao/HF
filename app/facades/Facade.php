@@ -7,7 +7,7 @@ class Facade{
     }
     public static function __callStatic($method,$args){
     	$instance = static::$app->make(static::getFacadeAccessor());
-    	$instance->$method(...$args);
+    	return $instance->$method(...$args);
     }
     public static function getFacadeAccessor(){
 

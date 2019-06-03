@@ -4,35 +4,35 @@
 * \HomeController
 */
 
-use App\Services\YoudaoService;
-use App\Services\RequestService;
-use App\Services\TranslateService;
-use App\Providers\MongoDB;
+use App\Facade\Log;
+use App\Facade\Redis;
+use App\Facade\Request;
+
 
 class HomeController extends BaseController
 {
   public function home(){
-    echo 'Hi Hp framework';
-    //dump($this->request->get('test'));
-    //dump($this->_outPut('Harry'));
-    //$insertData = [['x' => 1, 'name'=>'菜鸟教程', 'url' => 'http://www.runoob.com'],
-    //    ['x' => 2, 'name'=>'Google', 'url' => 'http://www.google.com'],
-    //    ['x' => 3, 'name'=>'taobao', 'url' => 'http://www.taobao.com']
-    //];
-    //MongoDB::insert($insertData);
-    // $filter = ['x'=>['$gt' => 1]];
-    // $option = ['projection'=>['_id'=>0],
-    //         'sort'=>['x'=> -1]
-    //     ];
-    // $res = MongoDB::query($filter,$option);
-    // $updateData = [[['x' => 2],
-    // ['$set' => ['name' => '菜鸟工具', 'url' => 'tool.runoob.com']],
-    // ['multi' => true, 'upsert' => false]]];
-    // MongoDB::update($updateData);
-    //   $delData = [[['x' => 1], ['limit' => 0]]];
-    //   MongoDB::delete($delData);
-    $this->_outPut('test');
+    echo 'Hi HF framework';
    
+   
+  }
+  public function index(Request $request){
+    echo 'index Page';
+    dump($request);
+
+  }
+
+  public function test(){
+    $log = $app->make('log');
+    $log->write('contract','harry test Log contract log');
+    // Log::write('harry test facade');
+    $redis = $app->make('redis');
+    $redis->write('contract','harry test Redis contract log');
+    Redis::set('facade','harry test redis facade');
+
+    $request_params = Request::getConstructParams($_SERVER);
+    $request = $app->make('request',$request_params);
+    dump($request->getQueryParameters());
   }
   
 

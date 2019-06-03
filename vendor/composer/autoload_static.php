@@ -8,7 +8,12 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '383eaff206634a77a1be54e64e6459c7' => __DIR__ . '/..' . '/sabre/uri/lib/functions.php',
+        '2b9d0f43f9552984cfa82fee95491826' => __DIR__ . '/..' . '/sabre/event/lib/coroutine.php',
+        'd81bab31d3feb45bfe2f283ea3c8fdf7' => __DIR__ . '/..' . '/sabre/event/lib/Loop/functions.php',
+        'a1cce3d26cc15c00fcd0b3354bd72c88' => __DIR__ . '/..' . '/sabre/event/lib/Promise/functions.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        'ebdb698ed4152ae445614b69b5e4bb6a' => __DIR__ . '/..' . '/sabre/http/lib/functions.php',
         'b36b47f18686089d42c9181bf0ef86b9' => __DIR__ . '/../..' . '/common/helper/function.php',
     );
 
@@ -17,6 +22,9 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
+            'Sabre\\Uri\\' => 10,
+            'Sabre\\HTTP\\' => 11,
+            'Sabre\\Event\\' => 12,
         ),
         'P' => 
         array (
@@ -41,6 +49,18 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
         ),
+        'Sabre\\Uri\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabre/uri/lib',
+        ),
+        'Sabre\\HTTP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabre/http/lib',
+        ),
+        'Sabre\\Event\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabre/event/lib',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -60,6 +80,8 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
         'App\\Facade\\Facade' => __DIR__ . '/../..' . '/app/facades/Facade.php',
         'App\\Facade\\Log' => __DIR__ . '/../..' . '/app/facades/Log.php',
         'App\\Facade\\Redis' => __DIR__ . '/../..' . '/app/facades/Redis.php',
+        'App\\Facade\\Request' => __DIR__ . '/../..' . '/app/facades/Request.php',
+        'App\\Facade\\Route' => __DIR__ . '/../..' . '/app/facades/Route.php',
         'App\\Models\\Collect' => __DIR__ . '/../..' . '/app/models/Collect.php',
         'App\\Providers\\DB' => __DIR__ . '/../..' . '/app/providers/Providers.php',
         'App\\Providers\\Log' => __DIR__ . '/../..' . '/app/providers/Providers.php',
@@ -67,6 +89,8 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
         'App\\Providers\\MongoDB' => __DIR__ . '/../..' . '/app/providers/Providers.php',
         'App\\Providers\\Redis' => __DIR__ . '/../..' . '/app/providers/Providers.php',
         'App\\Providers\\RedisServiceProvider' => __DIR__ . '/../..' . '/app/providers/RedisServiceProvider.php',
+        'App\\Providers\\RequestProvider' => __DIR__ . '/../..' . '/app/providers/RequestProvider.php',
+        'App\\Providers\\RouteProvider' => __DIR__ . '/../..' . '/app/providers/RouteProvider.php',
         'App\\Providers\\ServiceProvider' => __DIR__ . '/../..' . '/app/providers/ServiceProvider.php',
         'App\\Services\\RequestService' => __DIR__ . '/../..' . '/app/service/RequestService.php',
         'App\\Services\\TranslateService' => __DIR__ . '/../..' . '/app/service/TranslateService.php',

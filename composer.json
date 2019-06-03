@@ -11,7 +11,8 @@
     "require":{
         "noahbuscher/macaw": "dev-master",
         "monolog/monolog": "^1.23",
-        "symfony/var-dumper": "^3.4"
+        "symfony/var-dumper": "^3.4",
+        "sabre/http": "^4.2"
     },
     "autoload": {
         "classmap": [

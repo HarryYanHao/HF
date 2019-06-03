@@ -7,6 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+    '383eaff206634a77a1be54e64e6459c7' => $vendorDir . '/sabre/uri/lib/functions.php',
+    '2b9d0f43f9552984cfa82fee95491826' => $vendorDir . '/sabre/event/lib/coroutine.php',
+    'd81bab31d3feb45bfe2f283ea3c8fdf7' => $vendorDir . '/sabre/event/lib/Loop/functions.php',
+    'a1cce3d26cc15c00fcd0b3354bd72c88' => $vendorDir . '/sabre/event/lib/Promise/functions.php',
     '667aeda72477189d0494fecd327c3641' => $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
+    'ebdb698ed4152ae445614b69b5e4bb6a' => $vendorDir . '/sabre/http/lib/functions.php',
     'b36b47f18686089d42c9181bf0ef86b9' => $baseDir . '/common/helper/function.php',
 );

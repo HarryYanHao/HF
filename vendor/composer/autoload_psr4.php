@@ -8,6 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
+    'Sabre\\Uri\\' => array($vendorDir . '/sabre/uri/lib'),
+    'Sabre\\HTTP\\' => array($vendorDir . '/sabre/http/lib'),
+    'Sabre\\Event\\' => array($vendorDir . '/sabre/event/lib'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'NoahBuscher\\Macaw\\' => array($vendorDir . '/noahbuscher/macaw'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
