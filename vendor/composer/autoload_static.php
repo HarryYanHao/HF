@@ -82,6 +82,8 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
         'App\\Facade\\Redis' => __DIR__ . '/../..' . '/app/facades/Redis.php',
         'App\\Facade\\Request' => __DIR__ . '/../..' . '/app/facades/Request.php',
         'App\\Facade\\Route' => __DIR__ . '/../..' . '/app/facades/Route.php',
+        'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/http/Kernel.php',
+        'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/http/middleware/Authenticate.php',
         'App\\Models\\Collect' => __DIR__ . '/../..' . '/app/models/Collect.php',
         'App\\Providers\\DB' => __DIR__ . '/../..' . '/app/providers/Providers.php',
         'App\\Providers\\Log' => __DIR__ . '/../..' . '/app/providers/Providers.php',
@@ -101,6 +103,8 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
         'HomeController' => __DIR__ . '/../..' . '/app/controllers/HomeController.php',
         'Illuminate\\Application\\Application' => __DIR__ . '/../..' . '/framework/src/Application.php',
         'Illuminate\\Container\\Container' => __DIR__ . '/../..' . '/framework/src/Container.php',
+        'Illuminate\\Http\\Kernel' => __DIR__ . '/../..' . '/framework/src/Kernel.php',
+        'Illuminate\\Pipeline\\Pipeline' => __DIR__ . '/../..' . '/framework/src/Pipeline.php',
         'Libs\\Log\\MyLog' => __DIR__ . '/../..' . '/libs/Log.php',
         'Libs\\Redis\\MyRedis' => __DIR__ . '/../..' . '/libs/MyRedis.php',
     );

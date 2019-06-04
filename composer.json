@@ -21,8 +21,9 @@
           "app/providers",
           "app/service",
           "app/contract",
-          "common",
           "app/facades",
+          "app/http",
+          "common",
           "bootstrap",
           "framework",
           "libs"

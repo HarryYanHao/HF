@@ -12,6 +12,8 @@ return array(
     'App\\Facade\\Redis' => $baseDir . '/app/facades/Redis.php',
     'App\\Facade\\Request' => $baseDir . '/app/facades/Request.php',
     'App\\Facade\\Route' => $baseDir . '/app/facades/Route.php',
+    'App\\Http\\Kernel' => $baseDir . '/app/http/Kernel.php',
+    'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/http/middleware/Authenticate.php',
     'App\\Models\\Collect' => $baseDir . '/app/models/Collect.php',
     'App\\Providers\\DB' => $baseDir . '/app/providers/Providers.php',
     'App\\Providers\\Log' => $baseDir . '/app/providers/Providers.php',
@@ -31,6 +33,8 @@ return array(
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'Illuminate\\Application\\Application' => $baseDir . '/framework/src/Application.php',
     'Illuminate\\Container\\Container' => $baseDir . '/framework/src/Container.php',
+    'Illuminate\\Http\\Kernel' => $baseDir . '/framework/src/Kernel.php',
+    'Illuminate\\Pipeline\\Pipeline' => $baseDir . '/framework/src/Pipeline.php',
     'Libs\\Log\\MyLog' => $baseDir . '/libs/Log.php',
     'Libs\\Redis\\MyRedis' => $baseDir . '/libs/MyRedis.php',
 );

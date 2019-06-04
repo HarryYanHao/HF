@@ -6,7 +6,7 @@
 
 use App\Facade\Log;
 use App\Facade\Redis;
-use App\Facade\Request;
+use Sabre\HTTP\Request;
 
 
 class HomeController extends BaseController

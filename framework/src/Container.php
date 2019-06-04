@@ -6,6 +6,7 @@ use ReflectionClass;
 class Container{
 	protected $binding = [];
 	protected static $instance;
+	protected $aliases = [];
 
 	public function bind($abstract,$concrete){
 		//根据名称创建绑定对象 暂时只支持闭包
@@ -15,6 +16,8 @@ class Container{
 	}
 
 	public function make($abstract,$parameters=[]){
+		//获取别名 有别名用别名 没有别名用本身
+		$abstract = $this->getAlias($abstract);
 		//根据key值获取binding值
 		$concrete = $this->binding[$abstract]['concrete'];
 		return $concrete($this,$parameters);
@@ -67,6 +70,12 @@ class Container{
 	}
 	public  function getBindings(){
 		return $this->binding;
+	}
+	public function alias($abstract,$alias){
+		$this->aliases[$alias] = $abstract;
+	}
+	public function getAlias($abstract){
+		return isset($this->aliases[$abstract]) ? $this->aliases[$abstract] : $abstract;
 	}
 	
 

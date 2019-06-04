@@ -22,6 +22,7 @@ class Application extends Container{
 	protected function registerBaseBindings(){
 		static::setInstance($this);
 		$this->bind('app',$this);
+		$this->alias('app','Illuminate\Application\Application');
 	}
 
 	protected function registerBaseServiceProviders(){
