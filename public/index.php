@@ -14,9 +14,11 @@ require '../vendor/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
-
+dump($app);
 $kernel = $app->make('kernel');
-dump($kernel);
+$kernel->handle();
+
+
 
 //$route = $app->make('route');
 //Route::get('/test','HomeController@test');

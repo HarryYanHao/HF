@@ -40,6 +40,11 @@ class Application extends Container{
 	protected function getProvider($provider){
 		is_string($provider)?$provider:get_class($provider);
 	}
+	public function bootstrapWith($bootstrappers){
+		foreach ($bootstrappers as $bootstrapper) {
+			$this->make($bootstrapper)->bootstrap($this);
+		}
+	}
 
 	public function version(){
 		return self::VERSION;

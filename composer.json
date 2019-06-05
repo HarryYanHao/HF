@@ -23,6 +23,7 @@
           "app/contract",
           "app/facades",
           "app/http",
+          "app/http/middleware",
           "common",
           "bootstrap",
           "framework",

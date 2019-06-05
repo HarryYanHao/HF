@@ -14,6 +14,7 @@ return array(
     'App\\Facade\\Route' => $baseDir . '/app/facades/Route.php',
     'App\\Http\\Kernel' => $baseDir . '/app/http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/http/middleware/Authenticate.php',
+    'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/http/middleware/RedirectIfAuthenticated.php',
     'App\\Models\\Collect' => $baseDir . '/app/models/Collect.php',
     'App\\Providers\\DB' => $baseDir . '/app/providers/Providers.php',
     'App\\Providers\\Log' => $baseDir . '/app/providers/Providers.php',

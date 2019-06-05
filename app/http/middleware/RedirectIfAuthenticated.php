@@ -4,11 +4,8 @@ namespace App\Http\Middleware;
 
 
 
-class Authenticate{
+class RedirectIfAuthenticated{
 	public static function handle($request,\Closure $next){
-		if(empty($request->getPostData())){
-			$request->setPostData(['harry'=>'test']);
-		}
 		return $next($request);
 	}
 	

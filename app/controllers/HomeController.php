@@ -18,7 +18,6 @@ class HomeController extends BaseController
   }
   public function index(Request $request){
     echo 'index Page';
-    dump($request);
 
   }
 

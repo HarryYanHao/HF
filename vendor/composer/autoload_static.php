@@ -84,6 +84,7 @@ class ComposerStaticInitdf968060a1ca20f19c92dd5ca8ca8b43
         'App\\Facade\\Route' => __DIR__ . '/../..' . '/app/facades/Route.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/http/middleware/Authenticate.php',
+        'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/http/middleware/RedirectIfAuthenticated.php',
         'App\\Models\\Collect' => __DIR__ . '/../..' . '/app/models/Collect.php',
         'App\\Providers\\DB' => __DIR__ . '/../..' . '/app/providers/Providers.php',
         'App\\Providers\\Log' => __DIR__ . '/../..' . '/app/providers/Providers.php',
