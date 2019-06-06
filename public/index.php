@@ -6,6 +6,7 @@ use App\Facade\Log;
 use App\Facade\Redis;
 use App\Facade\Route;
 use Sabre\HTTP\Request;
+use Illuminate\Container\Container;
 
 header("Content-type:text/html;charset=utf-8");
 // Autoload 自动载入
@@ -14,9 +15,13 @@ require '../vendor/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
-dump($app);
+
 $kernel = $app->make('kernel');
 $kernel->handle();
+dump(Container::getInstance());
+
+
+
 
 
 

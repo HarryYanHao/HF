@@ -1,9 +1,7 @@
 <?php
 namespace Illuminate\Application;
 use Illuminate\Container\Container;
-use App\Providers\LogServiceProvider;
-use App\Providers\RedisServiceProvider;
-use App\Providers\RequestProvider;
+use Illuminate\Bootstrap\ProviderRepository;
 use App\Providers\RouteProvider;
 use App\Facade\Facade;
 class Application extends Container{
@@ -11,9 +9,6 @@ class Application extends Container{
 	protected $basePath;
 	public function __construct(){
 		$this->registerBaseBindings();
-
-		//门面初始化
-		$this->registerBaseFacade();
 		
 		$this->registerBaseServiceProviders();
 
@@ -26,15 +21,9 @@ class Application extends Container{
 	}
 
 	protected function registerBaseServiceProviders(){
-		$this->register(new LogServiceProvider($this));
-		$this->register(new RedisServiceProvider($this));
-		$this->register(new RequestProvider($this));
 		$this->register(new RouteProvider($this));		
 	}
-	protected function registerBaseFacade(){
-		new Facade($this);
-	}
-	protected function register($provider){
+	public function register($provider){
 		$provider->register();
 	}
 	protected function getProvider($provider){
@@ -45,6 +34,16 @@ class Application extends Container{
 			$this->make($bootstrapper)->bootstrap($this);
 		}
 	}
+	public function make($abstract,$parameters = []){
+		$abstract = $this->getAlias($abstract);
+		if(!isset($this->binding[$abstract])){
+			return $this->build($abstract);
+		}
+		return parent::make($abstract,$parameters);
+	}
+	public function registerConfiguredProviders(){
+		(new ProviderRepository($this))->load(config('app.providers'));
+	}
 
 	public function version(){
 		return self::VERSION;
@@ -52,7 +51,6 @@ class Application extends Container{
 	public function configPath(){
 		return $this->basePath.DIRECTORY_SEPARATOR.'config';
 	}
-	public function __invoke($param){
-		return $this->make($param);
-	}
+
+	
 }

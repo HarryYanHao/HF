@@ -13,7 +13,7 @@ class Kernel{
 
 	protected $router;
 
-	protected $bootstrappers = [];
+	protected $bootstrappers = ['Illuminate\ProviderRepository\RegisterProviders','Illuminate\ProviderRepository\RegisterFacades'];
 
 	protected $middleware = [];
 
@@ -28,6 +28,7 @@ class Kernel{
 	}
 
 	public function handle(){
+		$this->app->bind('request','Sabre\HTTP\Request');
 		$route = $this->app->make('route');
 		$request_params = Request::getConstructParams($_SERVER);
     	$request = $this->app->make('request',$request_params);
