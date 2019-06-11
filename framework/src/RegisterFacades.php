@@ -1,6 +1,7 @@
 <?php
 namespace Illuminate\ProviderRepository;
 
+use App\Facade\Facade;
 use  Illuminate\Application\Application;
 
 class RegisterFacades{

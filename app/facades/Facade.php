@@ -5,8 +5,11 @@ class Facade{
     public function __construct($app){
        
     }
-    public function setFacadeApplication($app){
+    public static function setFacadeApplication($app){
     	static::$app = $app;
+    }
+    public static function getFacadeApplication(){
+    	return static::$app;
     }
     public static function __callStatic($method,$args){
     	$instance = static::$app->make(static::getFacadeAccessor());

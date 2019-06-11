@@ -19,7 +19,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 $kernel = $app->make('kernel');
 $kernel->handle();
 dump(Container::getInstance());
-
+Redis::write('facades','test facades');
 
 
 

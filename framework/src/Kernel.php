@@ -29,12 +29,13 @@ class Kernel{
 
 	public function handle(){
 		$this->app->bind('request','Sabre\HTTP\Request');
+		$this->bootstrap();
 		$route = $this->app->make('route');
 		$request_params = Request::getConstructParams($_SERVER);
     	$request = $this->app->make('request',$request_params);
 		$route->map();
 		$route::dispatch($request);
-		$this->bootstrap();
+		
 	}
 
 	public function bootstrap(){

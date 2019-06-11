@@ -21,7 +21,7 @@ class Application extends Container{
 	}
 
 	protected function registerBaseServiceProviders(){
-		$this->register(new RouteProvider($this));		
+		$this->register(new RouteProvider($this));
 	}
 	public function register($provider){
 		$provider->register();
